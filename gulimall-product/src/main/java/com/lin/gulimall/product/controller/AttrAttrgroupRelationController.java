@@ -5,6 +5,8 @@ import java.util.Map;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,10 +29,18 @@ import com.lin.common.utils.R;
  */
 @RequestMapping("/product/attrAttrgroupRelation")
 @RestController
-
+@RefreshScope
 public class AttrAttrgroupRelationController {
     @Autowired
     private AttrAttrgroupRelationService attrAttrgroupRelationService;
+   /* @Value("${pattern.name}")
+   private String name;
+
+    @RequestMapping("/test")
+    public String test(){
+        return name;
+
+    }*/
 
     /**
      * 列表

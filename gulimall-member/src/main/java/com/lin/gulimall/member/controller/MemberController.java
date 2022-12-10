@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 
+import com.lin.gulimall.member.feign.MemberClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,6 +31,7 @@ import com.lin.common.utils.R;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+
 
     /**
      * 列表
